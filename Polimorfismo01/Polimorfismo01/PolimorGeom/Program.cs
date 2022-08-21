@@ -2,28 +2,28 @@
 using System;
 
 namespace Polimorfismo_Zoo.PolimorGeom {
-    internal class Program {
+    public class Program : {
         static void Main(string[] args) {
-            Console.WriteLine("What is the hight of the square ? ");
+            Console.WriteLine("What is the hight of the square: ");
             double hight_square = Convert.ToDouble(Console.ReadLine());
-            Square square = new Square("Square", hight_square, hight_square);
+            Square square = new Square(4, hight_square, hight_square);
             Console.WriteLine($"The total area of a square with a hight and base {square.Hight} is: {square.TotalArea()}");
             Console.ReadKey();
 
-            Console.WriteLine("Digite a altura do triângulo: ");
+            Console.WriteLine("Type the hight of the triangle: ");
             double hight_triangle = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Digite a base do triângulo: ");
+            Console.WriteLine("Type the triangle base: ");
             double baseTriangle = Convert.ToDouble(Console.ReadLine());
-            Triangle triangle = new Triangle("Triangle", hight_triangle, baseTriangle);
-            Console.WriteLine($"A área total de um triângulo com altura {triangle.Hight} e base {triangle.Base} é de {triangle.TotalArea()}");
+            Triangle triangle = new Triangle(3, hight_triangle, baseTriangle);
+            Console.WriteLine($"The total area of a triangle with a hight {triangle.Hight} and base {triangle.Base} is: {triangle.TotalArea()}");
             Console.ReadKey();
 
-            Console.WriteLine("Digite a altura do retângulo: ");
+            Console.WriteLine("Type the hight of the rectangle: ");
             double hight_rectangle = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Digite a base do retângulo: ");
+            Console.WriteLine("Type the rectagle base: ");
             double baseRectangle = Convert.ToDouble(Console.ReadLine());
-            Rectangle retangulo = new Rectangle("Rectangle", baseRectangle, baseRectangle);
-            Console.WriteLine($"A área total de um retângulo com altura {retangulo.Hight} e base {retangulo.Base} é de {retangulo.TotalArea()}");
+            Rectangle retangulo = new Rectangle(4, baseRectangle, baseRectangle);
+            Console.WriteLine($"The total area of a rectangle with a hight {retangulo.Hight} and base {retangulo.Base} is: {retangulo.TotalArea()}");
             Console.ReadKey();
         }
     }
